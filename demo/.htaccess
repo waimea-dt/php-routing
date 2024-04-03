@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# This dynamically determines the RewriteBase
+RewriteCond %{REQUEST_URI}::$1 ^(.*?/)(.*)::\2$
+RewriteRule ^(.*)$ - [E=BASE:%1]
+
+# RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# Redirect all requests to the index file
+RewriteRule . %{ENV:BASE}/index.php

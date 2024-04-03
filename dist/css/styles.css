@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* HEADINGS ---------------------------------------- */
+
+h1, h2, h3, h4 {
+    text-align: center;
+    margin-top: 0;
+}
+
+/* LANDING PAGE ---------------------------------------- */
+
+body#hero {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+body#hero h1 {
+    font-size: 3rem;
+}
+
+body#hero a {
+    font-size: 2rem;
+}
+
+/* HEADER / FOOTER ---------------------------------------- */
+
+#main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #999;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+#main-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+#main-header h1 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#main-footer {
+    text-align: center;
+    border-top: 1px solid #999;
+    margin-top: 2rem;
+}
+
+/* NAV ---------------------------------------- */
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding-bottom: 0.2em;
+    border-bottom: 5px solid transparent;
+}
+
+nav a.active {
+    border-color: #000;
+}
+
+nav a:hover  {
+    border-color: #f00;
+    color: #f00;
+}
+
+/* MAIN ---------------------------------------- */
+
+main {
+    flex: 1;
+    max-width: 40rem;
+    padding: 1rem;
+    margin: 1rem auto;
+}
+
+/* SECTIONS ---------------------------------------- */
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    gap: 2rem;
+}
+
+section > div {
+    border: 1px solid #999;
+    padding: 1rem;
+    max-width: 20rem;
+    background-color: #f7f7f7;
+    border-radius: 0.5rem;
+}
+
+/* CLICKABLE LIST ITEMS --------------------------------------- */
+
+li[hx-get] {
+    cursor: pointer;
+}
+
+li[hx-get]:hover {
+    color: #f00;
+}
+
+/* IMAGES ---------------------------------------- */
+
+img {
+    display: block;
+    max-width: 100%;
+    margin: 1rem auto;
+}
+
+/* FORMS ---------------------------------------- */
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    max-width: 100%;
+    margin: 1rem auto;
+    padding: 1rem;
+    background-color: #f7f7f7;
+    border: 1px solid #999;
+    border-radius: 0.5rem;
+}
+
+input, textarea, button {
+    font-size: inherit;
+}
+
+label:not(:first-of-type) {
+    margin-top: 1rem;
+}
+
+input[type=submit], button {
+    margin-top: 2rem;
+}
+
+/* TABLES ---------------------------------------- */
+
+table {
+    border-collapse: collapse;
+    background-color: #fff;
+    width: 100%;
+}
+
+th, td {
+    padding: 0.3em;
+    border: 1px solid #999;
+    text-align: left;
+}
+
