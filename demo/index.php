@@ -49,8 +49,9 @@ switch ([$method, $type, $route]) {
         $view = 'do-login.php';
         break;
 
-    case [POST, COMPONENT, 'logout']:
+    case [GET, PAGE, 'logout']:
         $view = 'do-logout.php';
+        $type = COMPONENT;
         break;
 
     // Normal Pages ---------------------------------------------
