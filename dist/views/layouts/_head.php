@@ -6,10 +6,10 @@
 <title><?= SITE_NAME ?></title>
 
 <!-- Load favicon -->
-<link rel="icon" href="<?= SITE_BASE ?>/images/favicon.svg">
+<link rel="icon" href="/images/favicon.svg">
 
 <!-- Load satylesshet -->
-<link rel="stylesheet" href="<?= SITE_BASE ?>/css/styles.css">
+<link rel="stylesheet" href="/css/styles.css">
 
 <!-- Load HTMX library -->
 <script src="https://unpkg.com/htmx.org"></script>

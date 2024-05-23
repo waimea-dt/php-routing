@@ -4,11 +4,11 @@
 <html lang="en">
 
     <head>
-        <?php require PARTIALS . 'head.php'; ?>
+        <?php require '_head.php'; ?>
     </head>
 
     <body id="hero">
-        <?php require PAGES . $view; ?>
+        <?php require VIEWS . $view; ?>
     </body>
 
 </html>

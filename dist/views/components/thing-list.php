@@ -4,7 +4,7 @@
 
     <li
         hx-trigger="click"
-        hx-get="<?= SITE_BASE ?>/thing-preview/1"
+        hx-get="/thing/1"
         hx-target="#thing-info"
     >
         First Thing
@@ -12,7 +12,7 @@
 
     <li
         hx-trigger="click"
-        hx-get="<?= SITE_BASE ?>/thing-preview/2"
+        hx-get="/thing/2"
         hx-target="#thing-info"
     >
         Second Thing
@@ -20,7 +20,7 @@
 
     <li
         hx-trigger="click"
-        hx-get="<?= SITE_BASE ?>/thing-preview/3"
+        hx-get="/thing/3"
         hx-target="#thing-info"
     >
         Third Thing

@@ -4,7 +4,7 @@
 
     <div
         id="thing-list"
-        hx-get="<?= SITE_BASE ?>/thing-list"
+        hx-get="/things"
         hx-trigger="load"
     ></div>
 

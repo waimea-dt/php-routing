@@ -1,7 +1,7 @@
 <h1>Contact Us</h1>
 
 <form
-    hx-post="<?= SITE_BASE ?>/send-message"
+    hx-post="/message"
     hx-trigger="submit"
     hx-swap="outerHTML"
 >
