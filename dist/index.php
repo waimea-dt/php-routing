@@ -18,8 +18,6 @@ $router->route(GET,  PAGE, '/contact',   'pages/contact.php');
 $router->route(GET,  PAGE, '/things',    'pages/things.php');
 $router->route(GET,  PAGE, '/thing/$id', 'pages/thing.php');
 
-$router->route(GET,  PAGE, '/multiply/$num1/by/$num2', 'pages/mult.php');
-
 $router->route(GET,  HTMX, '/things',    'components/thing-list.php');
 $router->route(GET,  HTMX, '/thing/$id', 'components/thing-preview.php');
 
