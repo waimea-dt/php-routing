@@ -3,29 +3,19 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <?php require '_head.php'; ?>
-    </head>
+    <?php require '_head.php'; ?>
 
     <body>
-
-        <header id="main-header">
-            <?php require '_header.php'; ?>
-
-            <nav id="main-nav">
-                <?php require '_nav.php'; ?>
-            </nav>
-        </header>
-
+        
+        <?php require '_header.php'; ?>
 
         <main>
-            <?php require VIEWS . $view; ?>
+
+            <?php require $pageContent; ?>
+        
         </main>
 
-
-        <footer id="main-footer">
-            <?php require '_footer.php'; ?>
-        </footer>
+        <?php require '_footer.php'; ?>   
 
     </body>
 

@@ -1,20 +1,34 @@
 <!-- This could be any information from the database -->
 
-<h1>Dashboard</h1>
+<?php global $isLoggedIn; ?>
+    
 
-<section id="dashboard">
+<?php if ($isLoggedIn): ?>
 
-    <div
-        hx-get="<?= SITE_BASE ?>/sales"
-        hx-trigger="load, every 300s"
-        hx-swap="innerHTML"
-    ></div>
+    <h1>Dashboard</h1>
 
-    <div
-        hx-get="<?= SITE_BASE ?>/system"
-        hx-trigger="load, every 3s"
-        hx-swap="innerHTML"
-    ></div>
+    <section id="dashboard">
 
-</section>
+        <article
+            hx-get="/sales"
+            hx-trigger="load, every 300s"
+        >
+            Loading sales data...
+        </article>
 
+        <article
+            hx-get="/system"
+            hx-trigger="load, every 1s"
+        >
+            Loading system status...
+        </article>
+
+    </section>
+
+<?php else: ?>
+
+    <h1>Forbidden</h1>
+
+    <p>You are not authorised to see this information</p>
+
+<?php endif ?>

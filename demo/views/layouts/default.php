@@ -1,30 +1,22 @@
 <!-- Default page layout with header / footer / nav -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
-    <head>
-        <?php require PARTIALS . 'head.php'; ?>
-    </head>
+    <?php require '_head.php'; ?>
 
     <body>
-
-        <header id="main-header">
-            <?php require PARTIALS . 'header.php'; ?>
-
-            <nav id="main-nav">
-                <?php require PARTIALS . 'nav.php'; ?>
-            </nav>
-        </header>
+        
+        <?php require '_header.php'; ?>
 
         <main>
-            <?php require PAGES . $view; ?>
+
+            <?php require $pageContent; ?>
+        
         </main>
 
-        <footer id="main-footer">
-            <?php require PARTIALS . 'footer.php'; ?>
-        </footer>
-
+        <?php require '_footer.php'; ?>    
+            
     </body>
 
 </html>

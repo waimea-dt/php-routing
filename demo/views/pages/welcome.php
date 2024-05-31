@@ -1,6 +1,4 @@
-<h1><?= SITE_NAME ?></h1>
+<h1>Simple PHP Routing with HTMX</h1>
 
-<img src="<?= SITE_BASE ?>/images/thing<?= rand(1,3) ?>.jpg" alt="Nice thing">
-
-<p><a href="<?= SITE_BASE ?>/things">Enter!</a>
+<p><a href="/about" role="button">Get Started</a></p>
 

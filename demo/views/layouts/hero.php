@@ -1,14 +1,18 @@
-<!-- Landing page / hero view layout -->
+<!-- Hero / landing page layout with just a main -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
-    <head>
-        <?php require PARTIALS . 'head.php'; ?>
-    </head>
+    <?php require '_head.php'; ?>
 
-    <body id="hero">
-        <?php require PAGES . $view; ?>
+    <body>
+
+        <main class="hero">
+
+            <?php require $pageContent; ?>
+        
+        </main>
+            
     </body>
 
 </html>

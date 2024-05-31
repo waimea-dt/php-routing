@@ -1,184 +1,156 @@
-* {
-    box-sizing: border-box;
+:root {
+    --font-size:         1rem;
+
+    --border-color:      var(--pico-muted-border-color);
+    --accent-color:      var(--pico-color-pumpkin);
+
+    --link-active-color: var(--accent-color);
+
+    --route-color:       var(--pico-muted-color);
+    --route-param-color: var(--pico-primary);
+    --route-value-color: var(--accent-color);
+
+    --danger-color:      var(--pico-del-color);
+
+    --h2-color:          var(--pico-primary);
+    --h3-color:          var(--pico-secondary);
 }
 
-html {
-    font-family: sans-serif;
-    font-size: 18px;
-}
 
 body {
-    margin: 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* HEADINGS ---------------------------------------- */
 
-h1, h2, h3, h4 {
+/* TEXT ---------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1.2em;
     text-align: center;
-    margin-top: 0;
 }
 
-/* LANDING PAGE ---------------------------------------- */
-
-body#hero {
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+:is(h1, h2, h3, h4, h5, h6):not(:first-child) {
+    margin-top: 2em;
 }
 
-body#hero h1 {
-    font-size: 3rem;
-}
+h2 { color: var(--h2-color); }
+h3 { color: var(--h3-color); }
 
-body#hero a {
-    font-size: 2rem;
-}
 
-/* HEADER / FOOTER ---------------------------------------- */
+
+/* HEADER ---------------------------------------- */
 
 #main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    border-bottom: 1px solid #999;
-    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
     margin-bottom: 2rem;
 }
 
-#main-header h1 {
+#main-header > * {
     margin: 0;
-    font-size: 1.5rem;
 }
 
-#main-header h1 a {
+#main-header > a {
+    font-size: 1.2rem;
+    font-weight: bold;
     text-decoration: none;
     color: inherit;
 }
 
-#main-header p {
-    margin: 0;
-}
+
+/* FOOTER ---------------------------------------- */
 
 #main-footer {
     text-align: center;
-    border-top: 1px solid #999;
+    border-top: 1px solid var(--border-color);
     margin-top: 2rem;
 }
 
+
 /* NAV ---------------------------------------- */
 
-nav ul {
-    list-style: none;
-    padding: 0;
+#main-nav {
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+#main-nav menu {
     margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
 }
 
-nav a {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    padding-bottom: 0.2em;
-    border-bottom: 5px solid transparent;
+
+#main-nav a[aria-current="page"] {
+    color: var(--link-active-color);
+    text-decoration: underline;
 }
 
-nav a.active {
-    border-color: #000;
-}
-
-nav a:hover  {
-    border-color: #f00;
-    color: #f00;
-}
 
 /* MAIN ---------------------------------------- */
 
 main {
     flex: 1;
-    max-width: 40rem;
-    padding: 1rem;
-    margin: 1rem auto;
+    max-width: 60rem;
 }
 
-/* SECTIONS ---------------------------------------- */
-
-section {
+main.hero {
+    height: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    align-items: start;
     gap: 2rem;
 }
 
-section > div {
-    border: 1px solid #999;
-    padding: 1rem;
-    max-width: 20rem;
-    background-color: #f7f7f7;
-    border-radius: 0.5rem;
+
+/* LAYOUT ---------------------------------------- */
+
+section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
 }
 
-/* CLICKABLE LIST ITEMS --------------------------------------- */
-
-li[hx-get] {
-    cursor: pointer;
+article {
+    border: 1px solid var(--border-color);
+    min-height: 6rem;
 }
 
-li[hx-get]:hover {
-    color: #f00;
+article:only-of-type {
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* IMAGES ---------------------------------------- */
-
-img {
-    display: block;
-    max-width: 80%;
-    margin: 1rem auto;
-}
-
-/* FORMS ---------------------------------------- */
-
-form {
-    display: flex;
-    flex-direction: column;
-    width: max-content;
-    max-width: 100%;
-    margin: 1rem auto;
-    padding: 1rem;
-    background-color: #f7f7f7;
-    border: 1px solid #999;
-    border-radius: 0.5rem;
-}
-
-input, textarea, button {
-    font-size: inherit;
-}
-
-label:not(:first-of-type) {
-    margin-top: 1rem;
-}
-
-input[type=submit], button {
-    margin-top: 2rem;
-}
-
-/* TABLES ---------------------------------------- */
-
-table {
-    border-collapse: collapse;
-    background-color: #fff;
-    width: 100%;
-}
-
-th, td {
-    padding: 0.3em;
-    border: 1px solid #999;
+article :is(h1, h2, h3, h4, h5, h6) {
     text-align: left;
+    color: unset;
 }
 
+
+/* EXAMPLES ---------------------------------------- */
+
+ul.routes {
+    font-weight: bold;
+    font-family: monospace;
+    font-size: var(--font-size);
+    color: var(--route-color);
+}
+
+ul.routes em {
+    font-style: normal;
+    color: var(--route-param-color);
+}
+
+ul.routes strong {
+    font-style: normal;
+    color: var(--route-value-color);
+}
+
+button.danger {
+    background-color: var(--danger-color);
+    border-color: var(--danger-color);
+}
