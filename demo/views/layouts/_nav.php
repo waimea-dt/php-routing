@@ -10,7 +10,7 @@
 
         <li><a href="/about">About</a>
         <li><a href="/routing">Routing</a>
-        <li><a href="/requests">Requests</a>
+        <li><a href="/requests">CRUD Requests</a>
 
     <?php if ($isLoggedIn): ?>
 

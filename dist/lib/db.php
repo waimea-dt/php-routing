@@ -3,26 +3,8 @@
 /*=====================================================================
  * Database Utility Library
  * 
- * Version: 1.1 (March 2024)
- * 
- * Steve Copley
- * Waimea College 
- * Digital Technologies Dept.
- *
- * https://github.com/...
- * 
- *---------------------------------------------------------------------
- * Functions to:
- * 
- *  - Connect to MySQL server database via PDO:    connectToDB()
- *  - Help with uploading images to the server:    uploadedImageData()
- * 
- *---------------------------------------------------------------------
- * History:
- * 
- *  1.0 (2024-03-04) - Initial release
- *  1.1 (2024-03-22) - Image upload function
- * 
+ * Steve Copley @ Digital Technologies Dept. Waimea College 
+ * https://github.com/waimea-dt/php-library/blob/main/lib/db.php
  *=====================================================================*/
 
 require_once 'debug.php';

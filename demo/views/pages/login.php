@@ -1,6 +1,8 @@
 <article>
     <h2>Login</h2>
 
+    <p>User: <strong>jimmy</strong>,  Pass: <strong>jimmy</strong></p>
+
     <form hx-post="login" hx-swap="outerHTML">
 
         <label>Username</label>
@@ -12,8 +14,6 @@
         <input type="submit" value="Login">
 
     </form>
-
-    <p>User: <strong>jimmy</strong>,  Pass: <strong>jimmy</strong></p>
 
 </article>
 

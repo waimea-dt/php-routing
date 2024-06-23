@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# Modify this to match your project base URL
+RewriteBase /~cpy/projects/php-routing/dist
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# Redirect all requests to the index file
+RewriteRule ^.*$ index.php
+
+Satisfy any
+
